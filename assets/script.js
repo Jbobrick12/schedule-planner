@@ -3,17 +3,10 @@
 // in the html.
 
 $(function () {
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
   var today = dayjs();
   var saveButton = $(".saveBtn");
-
+  // Handling the click event for the save button
   saveButton.click(function () {
-    // Handling the click event for the save button
     console.log("Save button clicked!");
 
     var timeBlock = $(this).closest(".time-block").attr("id");
@@ -23,13 +16,7 @@ $(function () {
     localStorage.setItem(timeBlock, userInput);
   });
 
-  // Check if there is saved text
-  //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
+  // Changing each class to change color based on past, present, and future
   $(".time-block").each(function () {
     const timeBlockHour = $(this).attr("id");
     const currentHour = dayjs().hour();
@@ -46,40 +33,34 @@ $(function () {
     }
   });
 
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
+  // Retrieving data from local storage and applying it to each text area
   var hourData9 = localStorage.getItem("09");
-  document.getElementById('09-text').innerHTML = hourData9;
+  document.getElementById("09-text").innerHTML = hourData9;
 
-  var hourData9 = localStorage.getItem("10");
-  document.getElementById('10-text').innerHTML = hourData9;
+  var hourData10 = localStorage.getItem("10");
+  document.getElementById("10-text").innerHTML = hourData10;
 
-  var hourData9 = localStorage.getItem("11");
-  document.getElementById('11-text').innerHTML = hourData9;
+  var hourData11 = localStorage.getItem("11");
+  document.getElementById("11-text").innerHTML = hourData11;
 
-  var hourData9 = localStorage.getItem("12");
-  document.getElementById('12-text').innerHTML = hourData9;
+  var hourData12 = localStorage.getItem("12");
+  document.getElementById("12-text").innerHTML = hourData12;
 
-  var hourData9 = localStorage.getItem("1");
-  document.getElementById('01-text').innerHTML = hourData9;
+  var hourData01 = localStorage.getItem("1");
+  document.getElementById("01-text").innerHTML = hourData01;
 
-  var hourData9 = localStorage.getItem("2");
-  document.getElementById('02-text').innerHTML = hourData9;
+  var hourData02 = localStorage.getItem("2");
+  document.getElementById("02-text").innerHTML = hourData02;
 
-  var hourData9 = localStorage.getItem("3");
-  document.getElementById('03-text').innerHTML = hourData9;
+  var hourData03 = localStorage.getItem("3");
+  document.getElementById("03-text").innerHTML = hourData03;
 
-  var hourData9 = localStorage.getItem("4");
-  document.getElementById('04-text').innerHTML = hourData9;
-  
-  var hourData9 = localStorage.getItem("5");
-  document.getElementById('05-text').innerHTML = hourData9;
+  var hourData04 = localStorage.getItem("4");
+  document.getElementById("04-text").innerHTML = hourData04;
 
+  var hourData05 = localStorage.getItem("5");
+  document.getElementById("05-text").innerHTML = hourData05;
 
-  var savedInput = localStorage.getItem(userInput);
-  document.querySelector(".description").value = savedInput;
   //
   // TODO: Add code to display the current date in the header of the page.
   var dayWeek = today.format("dddd, MMMM D");
