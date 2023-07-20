@@ -1,6 +1,3 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 
 $(function () {
   var today = dayjs();
@@ -61,8 +58,7 @@ $(function () {
   var hourData05 = localStorage.getItem("5");
   document.getElementById("05-text").innerHTML = hourData05;
 
-  //
-  // TODO: Add code to display the current date in the header of the page.
+  // Displays current date at the top of the page
   var dayWeek = today.format("dddd, MMMM D");
   $("#currentDay").text(dayWeek);
 });
