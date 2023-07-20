@@ -10,6 +10,7 @@ body {
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   .description {
@@ -57,7 +58,7 @@ body {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
   }
-
+/* Added bold weight to the date to make it stand out a bit more */
   .lead {
     font-weight: bold;
   }

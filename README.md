@@ -1,4 +1,8 @@
 # schedule-planner
 Creating a planner for a daily schedule
 
-I used w3schools and MDN as references.
+References I used: 
+
+https://www.w3schools.com/jsref/prop_text_value.asp
+
+https://day.js.org/docs/en/display/format
