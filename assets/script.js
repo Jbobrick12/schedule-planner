@@ -50,18 +50,33 @@ $(function () {
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  var hourData = localStorage.getItem(timeBlock);
-  if (hourData === "09") {
-    document.querySelector("#description").value = hourData["09"];
-  } else {
-    document.querySelector("#description").value = "";
-  }
+  var hourData9 = localStorage.getItem("09");
+  document.getElementById('09-text').innerHTML = hourData9;
 
-  if ("10" in hourData) {
-    document.getElementById("10").value = hourData["10"];
-  } else {
-    document.getElementById("10").value = "";
-  }
+  var hourData9 = localStorage.getItem("10");
+  document.getElementById('10-text').innerHTML = hourData9;
+
+  var hourData9 = localStorage.getItem("11");
+  document.getElementById('11-text').innerHTML = hourData9;
+
+  var hourData9 = localStorage.getItem("12");
+  document.getElementById('12-text').innerHTML = hourData9;
+
+  var hourData9 = localStorage.getItem("1");
+  document.getElementById('01-text').innerHTML = hourData9;
+
+  var hourData9 = localStorage.getItem("2");
+  document.getElementById('02-text').innerHTML = hourData9;
+
+  var hourData9 = localStorage.getItem("3");
+  document.getElementById('03-text').innerHTML = hourData9;
+
+  var hourData9 = localStorage.getItem("4");
+  document.getElementById('04-text').innerHTML = hourData9;
+  
+  var hourData9 = localStorage.getItem("5");
+  document.getElementById('05-text').innerHTML = hourData9;
+
 
   var savedInput = localStorage.getItem(userInput);
   document.querySelector(".description").value = savedInput;
